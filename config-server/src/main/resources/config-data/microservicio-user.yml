@@ -3,6 +3,10 @@ server:
 spring:
   application:
     name: microservicio-user
+  cloud:
+    discovery:
+      enabled: true
+      service-id: eureka
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/users?createDatabaseIfNotExist=true
@@ -12,6 +16,13 @@ spring:
       ddl-auto: update
     show-sql: true
     database: mysql
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+
 eureka:
   client:
     fetch-registry: true

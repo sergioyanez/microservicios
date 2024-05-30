@@ -53,12 +53,12 @@ public class UserService {
     }
 
     public List<Car> getCars(Long userId) {
-        List<Car> cars = restTemplate.getForObject("http://localhost:8002/cars/byUser/" + userId, List.class);
+        List<Car> cars = restTemplate.getForObject("http://microservicio-car/cars/byUser/" + userId, List.class);
         return cars;
     }
 
     public List<Bike>getBikes(Long userId) {
-        List<Bike> bikes = restTemplate.getForObject("http://localhost:8003/bikes/byUser/" + userId, List.class);
+        List<Bike> bikes = restTemplate.getForObject("http://microservicio-bike/bikes/byUser/" + userId, List.class);
         return bikes;
     }
 
