@@ -9,9 +9,9 @@ import java.util.List;
 @FeignClient(name="microservicio-car")
 public interface CarFeignClient {
 
-    @PostMapping
+    @PostMapping("cars")
     Car save(@RequestBody Car car);
-    @GetMapping("/byUser/{userId}")
+    @GetMapping("cars/byUser/{userId}")
     List<Car> getCars(@PathVariable("userId") Long userId);
 
 
