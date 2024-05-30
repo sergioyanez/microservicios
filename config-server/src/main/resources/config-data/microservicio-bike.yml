@@ -1,5 +1,5 @@
 server:
-  port: 8003
+  port: ${PORT:${SERVER_PORT:0}}
 spring:
   application:
     name: microservicio-bike
@@ -22,5 +22,5 @@ eureka:
     register-with-eureka: true
     service-url:
       default-zone: http://localhost:8761/eureka/
-    instance:
-      hostname: localhost
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}

@@ -11,7 +11,7 @@ spring:
         native:
           search-locations: classpath:/config-data
         git:
-          default-label: eureka
+          default-label: multiple-instances
           uri: https://github.com/sergioyanez/microservicios
 
 
