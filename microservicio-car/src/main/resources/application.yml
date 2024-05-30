@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: microservicio-car
+  config:
+    import: optional:configserver:http://localhost:8081
+
+
+
+

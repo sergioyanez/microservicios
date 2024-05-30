@@ -1,1 +1,17 @@
-spring.application.name=config-server
+server:
+  port: 8081
+spring:
+  profiles:
+    active: native
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config-data
+        git:
+          default-label: config-server
+          uri: https://github.com/sergioyanez/microservicios
+
+
