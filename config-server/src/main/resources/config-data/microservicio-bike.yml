@@ -12,3 +12,11 @@ spring:
       ddl-auto: update
     show-sql: true
     database: mysql
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost
