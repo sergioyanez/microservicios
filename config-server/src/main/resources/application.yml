@@ -11,7 +11,7 @@ spring:
         native:
           search-locations: classpath:/config-data
         git:
-          default-label: multiple-instances
+          default-label: gateway
           uri: https://github.com/sergioyanez/microservicios
 
 
