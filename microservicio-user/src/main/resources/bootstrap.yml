@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: microservicio-user
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8081
+
+
+

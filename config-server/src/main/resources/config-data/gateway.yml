@@ -1,13 +1,15 @@
 server:
   port: 8080
+
 eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      default-zone: http://localhost:8761/eureka/
+      default-zone: http://localhost:8761/eureka
   instance:
     hostname: localhost
+
 spring:
   cloud:
     gateway:
@@ -16,7 +18,7 @@ spring:
           enabled: true
       routes:
         - id: microservicio-user
-          uri: lb://microservicio-user #'http://localhost:40865' #
+          uri: lb://microservicio-user
           predicates:
             - Path=/users/**
         - id: microservicio-car
@@ -27,6 +29,7 @@ spring:
           uri: lb://microservicio-bike
           predicates:
             - Path=/bikes/**
+
 logging:
   level:
     org.springframework.cloud.gateway: DEBUG
