@@ -11,6 +11,8 @@ eureka:
     hostname: localhost
 
 spring:
+  application:
+    name: gateway
   cloud:
     gateway:
       discovery:
@@ -18,17 +20,18 @@ spring:
           enabled: true
       routes:
         - id: microservicio-user
-          uri: lb://microservicio-user
+          uri: lb://MICROSERVICIO-USER
           predicates:
             - Path=/users/**
         - id: microservicio-car
-          uri: lb://microservicio-car
+          uri: lb://MICROSERVICIO-CAR
           predicates:
             - Path=/cars/**
         - id: microservicio-bike
-          uri: lb://microservicio-bike
+          uri: lb://MICROSERVICIO-BIKE
           predicates:
             - Path=/bikes/**
+
 logging:
   level:
     org.springframework.cloud.gateway: DEBUG
