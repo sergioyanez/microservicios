@@ -7,6 +7,8 @@ package com.example.microserviciobike.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 //@Entity
@@ -17,7 +19,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Bike {
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Id
+    private ObjectId id;
     private String brand;
     private String  model;
     private Long userId;

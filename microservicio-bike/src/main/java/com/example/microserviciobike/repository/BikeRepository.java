@@ -9,7 +9,7 @@ import java.util.List;
 
 @Repository
 //public interface BikeRepository extends JpaRepository<Bike,Long>{
-public interface BikeRepository extends MongoRepository<Bike,Long> {
+public interface BikeRepository extends MongoRepository<Bike,String> {
 
     List<Bike> findByUserId(Long userId);
 }

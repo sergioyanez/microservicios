@@ -28,7 +28,7 @@ public class BikeService {
         bikeRepository.delete(bike);
     }
 
-    public Bike findById(Long id){
+    public Bike findById(String id){
         return bikeRepository.findById(id).orElse(null);
     }
 

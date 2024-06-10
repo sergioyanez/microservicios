@@ -26,7 +26,7 @@ public class BikeController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Bike> getBikeById(@PathVariable("id") Long id) {
+    public ResponseEntity<Bike> getBikeById(@PathVariable("id") String id) {
         Bike bike = bikeService.findById(id);
         if (bike == null) {
             return  ResponseEntity.notFound().build();

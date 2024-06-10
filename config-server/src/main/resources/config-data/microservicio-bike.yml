@@ -37,7 +37,8 @@ spring:
       service-id: eureka
   data:
     mongodb:
-      uri: mongodb://localhost:27017/bikes
+      authentication-database: admin
+      uri: mongodb://root:root@localhost:27017/bikes?authSource=admin
 eureka:
   client:
     fetch-registry: true
