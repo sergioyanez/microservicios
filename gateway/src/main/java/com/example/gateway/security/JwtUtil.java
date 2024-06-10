@@ -22,7 +22,6 @@ public class JwtUtil {
 				.getBody();
 
 		boolean hasRole = false;
-System.out.println("--------------------------------      "+path +"     -----------------------------------------------------------");
 		if (path.contains("/users") ) {
 
 			if ("GET".equalsIgnoreCase(httpMethod)) {
