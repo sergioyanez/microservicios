@@ -23,14 +23,24 @@ spring:
           uri: lb://MICROSERVICIO-USER
           predicates:
             - Path=/users/**
+          filters:
+            - AuthFilter
         - id: microservicio-car
           uri: lb://MICROSERVICIO-CAR
           predicates:
             - Path=/cars/**
+          filters:
+            - AuthFilter
         - id: microservicio-bike
           uri: lb://MICROSERVICIO-BIKE
           predicates:
             - Path=/bikes/**
+          filters:
+            - AuthFilter
+        - id: microservicio-auth
+          uri: lb://MICROSERVICIO-AUTH
+          predicates:
+            - Path=/auth/**
 
 logging:
   level:

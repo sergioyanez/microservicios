@@ -10,11 +10,11 @@
     </parent>
 
     <groupId>micro.example</groupId>
-    <artifactId>microserviciosLuigiCode</artifactId>
+    <artifactId>microserviciosConJWT</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <packaging>pom</packaging>
-    <name>microserviciosLuigiCode</name>
+    <name>microserviciosConJWT</name>
     <description>microserviciosLuigiCode</description>
     <modules>
         <module>microservicio-user</module>
@@ -23,6 +23,7 @@
         <module>config-server</module>
         <module>eureka-service</module>
         <module>gateway</module>
+        <module>microservicio-auth</module>
     </modules>
     <properties>
         <java.version>21</java.version>

@@ -3,3 +3,6 @@ spring:
     name: gateway
   config:
     import: optional:configserver:http://localhost:8081
+
+jwt:
+  secret: s3cr3t_k3yw0rd.
