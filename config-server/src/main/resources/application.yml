@@ -11,7 +11,7 @@ spring:
         native:
           search-locations: classpath:/config-data
         git:
-          default-label: auth-jwt
+          default-label: mongodb
           uri: https://github.com/sergioyanez/microservicios
 
 

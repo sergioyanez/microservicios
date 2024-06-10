@@ -1,3 +1,31 @@
+#server:
+#  port: ${PORT:${SERVER_PORT:0}}
+#spring:
+#  application:
+#    name: microservicio-bike
+#  cloud:
+#    discovery:
+#      enabled: true
+#      service-id: eureka
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/bikes?createDatabaseIfNotExist=true
+#    username: root
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#    database: mysql
+#eureka:
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      default-zone: http://localhost:8761/eureka/
+#  instance:
+#    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+#    hostname: localhost
+#
 server:
   port: ${PORT:${SERVER_PORT:0}}
 spring:
@@ -7,15 +35,9 @@ spring:
     discovery:
       enabled: true
       service-id: eureka
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/bikes?createDatabaseIfNotExist=true
-    username: root
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    database: mysql
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/bikes
 eureka:
   client:
     fetch-registry: true
@@ -25,4 +47,3 @@ eureka:
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     hostname: localhost
-
